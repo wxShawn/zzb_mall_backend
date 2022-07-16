@@ -1,24 +1,26 @@
 const { getUserInfo } = require('../service/user.service');
 const { userInfoFormatError, userExisted, userRegisterError } = require('../constant/error.type');
+const bcrypt = require('bcryptjs');
 
-// 检测用户名或密码是否为空
+// 检测用户注册信息是否为空
 const userInfoValidator = async (ctx, next) => {
-  const { user_name, password } = ctx.request.body;
+  const { user_name, email, password } = ctx.request.body;
 
-  if (!user_name || !password) {
+  if (!user_name || !email || !password) {
+    console.error('用户注册信息有误', ctx.request.body);
     ctx.app.emit('error', userInfoFormatError, ctx);
     return false;
   }
   await next();
 }
 
-// 检测用户是否已存在
+// 检测用户email是否已存在
 const checkIfUserExists = async (ctx, next) => {
-  const { user_name } = ctx.request.body;
+  const { email } = ctx.request.body;
   try {
-    const userInfo = await getUserInfo({ user_name });
+    const userInfo = await getUserInfo({ email });
     if (userInfo) {
-      console.error('用户名已存在', userInfo);
+      console.error('邮箱已存在', { email });
       ctx.app.emit('error', userExisted, ctx);
       return false;
     }
@@ -27,11 +29,22 @@ const checkIfUserExists = async (ctx, next) => {
     ctx.app.emit('error', userRegisterError, ctx);
     return false;
   }
-  
+
+  await next();
+}
+
+// 对用户密码加密
+const cryptPassword = async (ctx, next) => {
+  const { password } = ctx.request.body;
+  const salt = bcrypt.genSaltSync(10);
+  const hash = bcrypt.hashSync(password, salt);
+  ctx.request.body.password = hash;
+
   await next();
 }
 
 module.exports = {
   userInfoValidator,
   checkIfUserExists,
+  cryptPassword,
 }

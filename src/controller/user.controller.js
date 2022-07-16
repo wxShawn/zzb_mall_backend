@@ -4,10 +4,10 @@ const { createUser } = require('../service/user.service');
 class UserController {
   // 用户注册
   async register(ctx, next) {
-    const { user_name, password } = ctx.request.body;
+    const { user_name, email, password } = ctx.request.body;
     
     try {
-      const res = await createUser(user_name, password);
+      const res = await createUser(user_name, email, password);
       ctx.body = {
         code: 0,
         message: '用户注册成功',

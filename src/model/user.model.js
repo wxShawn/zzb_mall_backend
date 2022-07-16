@@ -6,7 +6,13 @@ const User = sequelize.define('zzb_user', {
     type: DataTypes.STRING,
     allowNull: false,
     unique: true,
-    comment: '用户名, 必填, 唯一'
+    comment: '用户名, 必填'
+  },
+  email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+    comment: '邮箱, 必填, 唯一'
   },
   password: {
     type: DataTypes.CHAR(64),

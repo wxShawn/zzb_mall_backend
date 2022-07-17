@@ -25,6 +25,7 @@
     "koa-body": "^5.0.0",
     "koa-router": "^11.0.1",
     "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.7",
     "sequelize": "^6.21.3"
   },
   "devDependencies": {

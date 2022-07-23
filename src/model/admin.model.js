@@ -1,11 +1,11 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../db/sequelize');
 
-const VerifyCode = sequelize.define('zzb_verify_code', {
-  verify_code: {
-    type: DataTypes.CHAR(6),
+const Admin = sequelize.define('zzb_admin', {
+  admin_name: {
+    type: DataTypes.STRING,
     allowNull: false,
-    comment: '验证码，必填'
+    comment: '用户名, 必填'
   },
   email: {
     type: DataTypes.STRING,
@@ -13,20 +13,26 @@ const VerifyCode = sequelize.define('zzb_verify_code', {
     unique: true,
     comment: '邮箱, 必填, 唯一'
   },
-  used_for: {
-    type: DataTypes.STRING,
+  password: {
+    type: DataTypes.CHAR(64),
     allowNull: false,
-    comment: '验证码用途'
+    comment: '密码, 必填'
+  },
+  role_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    defaultValue: 1,
+    comment: '角色, 关联管理员角色表id'
   }
 });
 
 // 如果表不存在,则创建该表(如果已经存在,则不执行任何操作)
-// VerifyCode.sync();
+// Admin.sync();
 
 // 将创建表,如果表已经存在,则将其首先删除
-// User.sync({ force: true });
+// Admin.sync({ force: true });
 
 // 这将检查数据库中表的当前状态(它具有哪些列,它们的数据类型等),然后在表中进行必要的更改以使其与模型匹配.
-// User.sync({ alter: true });
+// Admin.sync({ alter: true });
 
-module.exports = VerifyCode;
+module.exports = Admin;

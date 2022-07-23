@@ -1,0 +1,575 @@
+[2022-07-19T22:57:47.582] [ERROR] error - [
+  Error: haha
+      at AdminService.create (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:8:11)
+      at register (D:\Project\Github\zzb_mall_backend\src\controller\admin.controller.js:8:32)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:425:16
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:34:12
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:430:31)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at jsonError (D:\Project\Github\zzb_mall_backend\node_modules\koa-json-error\lib\middleware.js:49:12)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+]
+[2022-07-20T11:27:11.144] [ERROR] error - [
+  ReferenceError: User is not defined
+      at AdminService.getOne (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:36:17)
+      at checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:9:36)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:425:16
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:34:12
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:430:31)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at jsonError (D:\Project\Github\zzb_mall_backend\node_modules\koa-json-error\lib\middleware.js:49:12)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+]
+[2022-07-20T11:28:14.705] [ERROR] error - [
+  Error
+      at Query.run (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\sequelize.js:311:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async MySQLQueryInterface.select (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+      at async Function.findAll (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:1134:21)
+      at async Function.findOne (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:1228:12)
+      at async AdminService.getOne (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:36:17)
+      at async checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:9:17) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: Unknown column 'user_name' in 'field list'
+        at Packet.asError (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:456:32)
+        at PacketParser.onPacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:85:12)
+        at PacketParser.executeStart (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:92:25)
+        at Socket.emit (node:events:526:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_FIELD_ERROR',
+      errno: 1054,
+      sqlState: '42S22',
+      sqlMessage: "Unknown column 'user_name' in 'field list'",
+      sql: "SELECT `id`, `user_name`, `email`, `password`, `is_admin` FROM `zzb_admins` AS `zzb_admin` WHERE `zzb_admin`.`email` = '234@abc.com';",
+      parameters: undefined
+    },
+    original: Error: Unknown column 'user_name' in 'field list'
+        at Packet.asError (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:456:32)
+        at PacketParser.onPacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:85:12)
+        at PacketParser.executeStart (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:92:25)
+        at Socket.emit (node:events:526:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_FIELD_ERROR',
+      errno: 1054,
+      sqlState: '42S22',
+      sqlMessage: "Unknown column 'user_name' in 'field list'",
+      sql: "SELECT `id`, `user_name`, `email`, `password`, `is_admin` FROM `zzb_admins` AS `zzb_admin` WHERE `zzb_admin`.`email` = '234@abc.com';",
+      parameters: undefined
+    },
+    sql: "SELECT `id`, `user_name`, `email`, `password`, `is_admin` FROM `zzb_admins` AS `zzb_admin` WHERE `zzb_admin`.`email` = '234@abc.com';",
+    parameters: {}
+  }
+]
+[2022-07-20T11:28:56.962] [ERROR] error - [ '234@abc.com', '管理员已存在' ]
+[2022-07-20T11:31:14.494] [ERROR] error - [ '234@abc.com', '管理员已存在' ]
+[2022-07-20T11:35:02.208] [ERROR] error - [ '234@abc.com', '管理员已存在' ]
+[2022-07-20T11:51:20.993] [ERROR] error - [ '234@abc.com', '管理员已存在' ]
+[2022-07-20T11:59:52.387] [ERROR] error - [ '234@abc.com', '管理员已存在' ]
+[2022-07-20T16:11:18.461] [ERROR] error - [ [ '邮箱格式错误', '密码格式错误' ] ]
+[2022-07-20T16:51:43.232] [ERROR] error - [ [ '邮箱格式错误', '密码格式错误' ] ]
+[2022-07-20T16:52:16.920] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T16:55:24.960] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T16:56:22.110] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T16:57:09.627] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T16:57:23.393] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T16:57:52.767] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T16:59:03.184] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T16:59:33.569] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T17:00:31.605] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T17:01:26.351] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T17:02:08.600] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T17:02:47.106] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T17:03:30.228] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T17:03:51.452] [ERROR] error - [ [ '密码格式错误' ] ]
+[2022-07-20T17:05:32.629] [ERROR] error - [ [ '密码格式错误' ] ]
+[2022-07-20T17:07:13.314] [ERROR] error - [ '23@abc.com', '管理员不存在' ]
+[2022-07-20T17:07:59.110] [ERROR] error - [ [ '密码格式错误' ] ]
+[2022-07-20T17:08:09.401] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T17:10:15.119] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T17:12:07.657] [ERROR] error - [ '23@abc.com', '管理员不存在' ]
+[2022-07-20T17:22:37.274] [ERROR] error - [ '123@abc.com', '管理员不存在' ]
+[2022-07-20T17:24:01.761] [ERROR] error - [ '23@abc.com', '管理员不存在' ]
+[2022-07-20T17:24:35.430] [ERROR] error - [ [ '密码格式错误' ] ]
+[2022-07-20T17:25:53.739] [ERROR] error - [
+  ReferenceError: a is not defined
+      at AdminService.getOne (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:25:17)
+      at checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:36:38)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at checkAdminRegisterInfo (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:28:5)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:425:16
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:34:12
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:430:31)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+]
+[2022-07-20T17:28:00.453] [ERROR] error - [
+  ReferenceError: a is not defined
+      at AdminService.getOne (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:25:17)
+      at checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:36:38)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at checkAdminRegisterInfo (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:28:5)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:425:16
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:34:12
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:430:31)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+]
+[2022-07-20T17:28:55.375] [ERROR] error - [
+  ReferenceError: a is not defined
+      at AdminService.getOne (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:25:17)
+      at checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:36:38)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:425:16
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:34:12
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:430:31)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at jsonError (D:\Project\Github\zzb_mall_backend\node_modules\koa-json-error\lib\middleware.js:49:12)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+]
+[2022-07-20T17:33:21.578] [ERROR] error - [ [ '密码格式错误' ] ]
+[2022-07-20T17:35:43.392] [ERROR] error - [ [ '密码格式错误' ] ]
+[2022-07-20T17:39:20.166] [ERROR] error - [
+  ReferenceError: a is not defined
+      at AdminService.create (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:13:17)
+      at register (D:\Project\Github\zzb_mall_backend\src\controller\admin.controller.js:9:32)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:57:5)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+]
+[2022-07-20T17:45:19.198] [ERROR] error - [
+  ReferenceError: a is not defined
+      at AdminService.create (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:13:17)
+      at register (D:\Project\Github\zzb_mall_backend\src\controller\admin.controller.js:9:32)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:57:11)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+]
+[2022-07-20T17:46:59.496] [ERROR] error - [ [ '密码格式错误' ] ]
+[2022-07-20T17:47:07.009] [ERROR] error - [ [ '邮箱格式错误', '密码格式错误' ] ]
+[2022-07-20T17:49:29.195] [ERROR] error - [ '123@abc.com', '管理员已存在' ]
+[2022-07-20T18:03:50.773] [ERROR] error - [
+  Error: 未接收到有效参数
+      at AdminService.getOne (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:32:13)
+      at checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:37:38)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:425:16
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:34:12
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:430:31)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at jsonError (D:\Project\Github\zzb_mall_backend\node_modules\koa-json-error\lib\middleware.js:49:12)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+]
+[2022-07-20T18:07:05.186] [ERROR] error - [ '1806394760@qq.com', '管理员不存在' ]
+[2022-07-20T20:04:06.979] [ERROR] error - [ '1806394760@qq.com', '管理员不存在' ]
+[2022-07-20T21:03:46.912] [ERROR] error - [ '1806394760@qq.com', '管理员不存在' ]
+[2022-07-20T21:37:05.893] [ERROR] error - [ '1806394760@qq.co', '管理员不存在' ]
+[2022-07-20T22:05:33.250] [ERROR] error - [ [ '密码格式错误' ] ]
+[2022-07-20T22:05:46.824] [ERROR] error - [ [ '密码格式错误' ] ]
+[2022-07-20T22:05:55.333] [ERROR] error - [ [ '邮箱格式错误', '密码格式错误' ] ]
+[2022-07-20T22:06:12.735] [ERROR] error - [ [ '邮箱格式错误', '密码格式错误' ] ]
+[2022-07-20T22:06:35.420] [ERROR] error - [ [ '邮箱格式错误', '密码格式错误' ] ]
+[2022-07-20T22:08:04.340] [ERROR] error - [ [ '邮箱格式错误', '密码格式错误' ] ]
+[2022-07-20T22:20:52.978] [ERROR] error - [
+  ReferenceError: a is not defined
+      at AdminService.create (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:13:17)
+      at register (D:\Project\Github\zzb_mall_backend\src\controller\admin.controller.js:11:32)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:64:11)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async checkAdminRegisterInfo (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:34:5)
+]
+[2022-07-20T22:40:30.524] [ERROR] error - [ [ '密码格式错误' ] ]
+[2022-07-20T22:46:33.243] [ERROR] error - [ [ '密码格式错误' ] ]
+[2022-07-20T22:47:03.505] [ERROR] error - [ '180639476@qq.com', '管理员不存在' ]
+[2022-07-20T22:57:26.064] [ERROR] error - [
+  ReferenceError: a is not defined
+      at AdminService.create (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:13:17)
+      at register (D:\Project\Github\zzb_mall_backend\src\controller\admin.controller.js:11:32)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at cryptPassword (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:84:11)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:74:11)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async checkAdminRegisterInfo (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:34:5)
+]
+[2022-07-20T23:50:08.186] [ERROR] error - [ '密码错误', '1806394760@qq.com' ]
+[2022-07-20T23:50:22.754] [ERROR] error - [ '密码错误', { email: '1806394760@qq.com' } ]
+[2022-07-21T10:08:13.832] [ERROR] error - [
+  Error: 未接收到有效参数
+      at AdminService.getOne (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:32:13)
+      at checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:42:38)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:425:16
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:34:12
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:430:31)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-body\index.js:148:14
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+]
+[2022-07-21T10:10:08.350] [ERROR] error - [
+  Error: 未接收到有效参数
+      at AdminService.getOne (D:\Project\Github\zzb_mall_backend\src\service\admin.service.js:32:13)
+      at checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:42:38)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:425:16
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:34:12
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-router\lib\router.js:430:31)
+      at dispatch (D:\Project\Github\zzb_mall_backend\node_modules\koa-compose\index.js:42:32)
+      at D:\Project\Github\zzb_mall_backend\node_modules\koa-body\index.js:148:14
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+]
+[2022-07-21T12:41:18.114] [ERROR] error - [ '密码错误', { email: '1806394760@qq.com' } ]
+[2022-07-22T15:02:51.332] [ERROR] error - [ '密码错误', { email: '1806394760@qq.com' } ]
+[2022-07-22T15:44:50.326] [ERROR] error - [
+  '获取验证码失败',
+  Error: No recipients defined
+      at SMTPConnection._formatError (D:\Project\Github\zzb_mall_backend\node_modules\nodemailer\lib\smtp-connection\index.js:787:19)
+      at SMTPConnection._setEnvelope (D:\Project\Github\zzb_mall_backend\node_modules\nodemailer\lib\smtp-connection\index.js:1004:34)
+      at SMTPConnection.send (D:\Project\Github\zzb_mall_backend\node_modules\nodemailer\lib\smtp-connection\index.js:618:14)
+      at sendMessage (D:\Project\Github\zzb_mall_backend\node_modules\nodemailer\lib\smtp-transport\index.js:228:28)
+      at D:\Project\Github\zzb_mall_backend\node_modules\nodemailer\lib\smtp-transport\index.js:286:25
+      at SMTPConnection._actionAUTHComplete (D:\Project\Github\zzb_mall_backend\node_modules\nodemailer\lib\smtp-connection\index.js:1553:9)
+      at SMTPConnection.<anonymous> (D:\Project\Github\zzb_mall_backend\node_modules\nodemailer\lib\smtp-connection\index.js:543:26)
+      at SMTPConnection._processResponse (D:\Project\Github\zzb_mall_backend\node_modules\nodemailer\lib\smtp-connection\index.js:950:20)
+      at SMTPConnection._onData (D:\Project\Github\zzb_mall_backend\node_modules\nodemailer\lib\smtp-connection\index.js:752:14)
+      at TLSSocket.SMTPConnection._onSocketData (D:\Project\Github\zzb_mall_backend\node_modules\nodemailer\lib\smtp-connection\index.js:191:44) {
+    code: 'EENVELOPE',
+    command: 'API'
+  }
+]
+[2022-07-22T15:55:08.264] [ERROR] error - [ undefined, '验证码已过期' ]
+[2022-07-22T16:01:35.120] [ERROR] error - [ '1806394760@qq.com', '验证码已过期' ]
+[2022-07-22T16:04:13.251] [ERROR] error - [ '密码错误', { email: '1806394760@qq.com' } ]
+[2022-07-22T17:35:29.265] [ERROR] error - [
+  '保存验证码失败',
+  ValidationError [SequelizeValidationError]: notNull Violation: zzb_emailverify.email cannot be null,
+  notNull Violation: zzb_emailverify.verify_code cannot be null
+      at InstanceValidator._validate (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:50:13)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async InstanceValidator._validateAndRunHooks (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:60:7)
+      at async InstanceValidator.validate (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:54:12)
+      at async model.save (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:2368:7)
+      at async sendVerifyCode (D:\Project\Github\zzb_mall_backend\src\controller\emailVerify.controller.js:27:7)
+      at async checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:72:5)
+      at async cors (D:\Project\Github\zzb_mall_backend\node_modules\koa2-cors\dist\index.js:91:9) {
+    errors: [ [ValidationErrorItem], [ValidationErrorItem] ]
+  }
+]
+[2022-07-22T17:36:45.681] [ERROR] error - [
+  '保存验证码失败',
+  ValidationError [SequelizeValidationError]: notNull Violation: zzb_emailverify.email cannot be null,
+  notNull Violation: zzb_emailverify.verify_code cannot be null
+      at InstanceValidator._validate (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:50:13)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async InstanceValidator._validateAndRunHooks (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:60:7)
+      at async InstanceValidator.validate (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:54:12)
+      at async model.save (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:2368:7)
+      at async sendVerifyCode (D:\Project\Github\zzb_mall_backend\src\controller\emailVerify.controller.js:28:7)
+      at async checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:72:5)
+      at async cors (D:\Project\Github\zzb_mall_backend\node_modules\koa2-cors\dist\index.js:91:9) {
+    errors: [ [ValidationErrorItem], [ValidationErrorItem] ]
+  }
+]
+[2022-07-22T17:38:00.093] [ERROR] error - [
+  '保存验证码失败',
+  ValidationError [SequelizeValidationError]: notNull Violation: zzb_emailverify.email cannot be null,
+  notNull Violation: zzb_emailverify.verify_code cannot be null
+      at InstanceValidator._validate (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:50:13)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async InstanceValidator._validateAndRunHooks (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:60:7)
+      at async InstanceValidator.validate (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:54:12)
+      at async model.save (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:2368:7)
+      at async sendVerifyCode (D:\Project\Github\zzb_mall_backend\src\controller\emailVerify.controller.js:27:7)
+      at async checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:72:5)
+      at async cors (D:\Project\Github\zzb_mall_backend\node_modules\koa2-cors\dist\index.js:91:9) {
+    errors: [ [ValidationErrorItem], [ValidationErrorItem] ]
+  }
+]
+[2022-07-22T17:39:12.042] [ERROR] error - [
+  '保存验证码失败',
+  ValidationError [SequelizeValidationError]: notNull Violation: zzb_emailverify.email cannot be null,
+  notNull Violation: zzb_emailverify.verify_code cannot be null
+      at InstanceValidator._validate (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:50:13)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async InstanceValidator._validateAndRunHooks (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:60:7)
+      at async InstanceValidator.validate (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:54:12)
+      at async model.save (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:2368:7)
+      at async sendVerifyCode (D:\Project\Github\zzb_mall_backend\src\controller\emailVerify.controller.js:27:7)
+      at async checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:72:5)
+      at async cors (D:\Project\Github\zzb_mall_backend\node_modules\koa2-cors\dist\index.js:91:9) {
+    errors: [ [ValidationErrorItem], [ValidationErrorItem] ]
+  }
+]
+[2022-07-22T17:40:08.410] [ERROR] error - [
+  '保存验证码失败',
+  ValidationError [SequelizeValidationError]: notNull Violation: zzb_emailverify.email cannot be null,
+  notNull Violation: zzb_emailverify.verify_code cannot be null
+      at InstanceValidator._validate (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:50:13)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async InstanceValidator._validateAndRunHooks (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:60:7)
+      at async InstanceValidator.validate (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:54:12)
+      at async model.save (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:2368:7)
+      at async sendVerifyCode (D:\Project\Github\zzb_mall_backend\src\controller\emailVerify.controller.js:27:7)
+      at async checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:72:5)
+      at async cors (D:\Project\Github\zzb_mall_backend\node_modules\koa2-cors\dist\index.js:91:9) {
+    errors: [ [ValidationErrorItem], [ValidationErrorItem] ]
+  }
+]
+[2022-07-22T17:41:55.714] [ERROR] error - [
+  '保存验证码失败',
+  ValidationError [SequelizeValidationError]: notNull Violation: zzb_emailverify.email cannot be null,
+  notNull Violation: zzb_emailverify.verify_code cannot be null
+      at InstanceValidator._validate (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:50:13)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async InstanceValidator._validateAndRunHooks (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:60:7)
+      at async InstanceValidator.validate (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\instance-validator.js:54:12)
+      at async model.save (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:2368:7)
+      at async sendVerifyCode (D:\Project\Github\zzb_mall_backend\src\controller\emailVerify.controller.js:27:7)
+      at async checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:72:5)
+      at async cors (D:\Project\Github\zzb_mall_backend\node_modules\koa2-cors\dist\index.js:91:9) {
+    errors: [ [ValidationErrorItem], [ValidationErrorItem] ]
+  }
+]
+[2022-07-22T17:48:11.312] [ERROR] error - [
+  '查询验证码失败',
+  Error
+      at Query.run (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\sequelize.js:311:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async MySQLQueryInterface.select (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+      at async Function.findAll (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:1134:21)
+      at async Function.findOne (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:1228:12)
+      at async EmailVerifyService.get (D:\Project\Github\zzb_mall_backend\src\service\emailVerify.service.js:22:17)
+      at async checkEmailVerifyCode (D:\Project\Github\zzb_mall_backend\src\middleware\emailVerify.middleware.js:12:27)
+      at async checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:72:5)
+      at async cors (D:\Project\Github\zzb_mall_backend\node_modules\koa2-cors\dist\index.js:91:9) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: Unknown column 'admin_name' in 'field list'
+        at Packet.asError (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:456:32)
+        at PacketParser.onPacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:85:12)
+        at PacketParser.executeStart (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:92:25)
+        at Socket.emit (node:events:526:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_FIELD_ERROR',
+      errno: 1054,
+      sqlState: '42S22',
+      sqlMessage: "Unknown column 'admin_name' in 'field list'",
+      sql: "SELECT `id`, `admin_name`, `email`, `password`, `role_id` FROM `zzb_emailverifies` AS `zzb_emailverify` WHERE `zzb_emailverify`.`email` = '1806394760@qq.com';",
+      parameters: undefined
+    },
+    original: Error: Unknown column 'admin_name' in 'field list'
+        at Packet.asError (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:456:32)
+        at PacketParser.onPacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:85:12)
+        at PacketParser.executeStart (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:92:25)
+        at Socket.emit (node:events:526:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_FIELD_ERROR',
+      errno: 1054,
+      sqlState: '42S22',
+      sqlMessage: "Unknown column 'admin_name' in 'field list'",
+      sql: "SELECT `id`, `admin_name`, `email`, `password`, `role_id` FROM `zzb_emailverifies` AS `zzb_emailverify` WHERE `zzb_emailverify`.`email` = '1806394760@qq.com';",
+      parameters: undefined
+    },
+    sql: "SELECT `id`, `admin_name`, `email`, `password`, `role_id` FROM `zzb_emailverifies` AS `zzb_emailverify` WHERE `zzb_emailverify`.`email` = '1806394760@qq.com';",
+    parameters: {}
+  }
+]
+[2022-07-22T17:51:01.329] [ERROR] error - [
+  '查询验证码失败',
+  Error
+      at Query.run (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\sequelize.js:311:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async MySQLQueryInterface.select (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+      at async Function.findAll (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:1134:21)
+      at async Function.findOne (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:1228:12)
+      at async EmailVerifyService.get (D:\Project\Github\zzb_mall_backend\src\service\emailVerify.service.js:21:17)
+      at async checkEmailVerifyCode (D:\Project\Github\zzb_mall_backend\src\middleware\emailVerify.middleware.js:12:27)
+      at async checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:72:5)
+      at async cors (D:\Project\Github\zzb_mall_backend\node_modules\koa2-cors\dist\index.js:91:9) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: Unknown column 'admin_name' in 'field list'
+        at Packet.asError (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:456:32)
+        at PacketParser.onPacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:85:12)
+        at PacketParser.executeStart (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:92:25)
+        at Socket.emit (node:events:526:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_FIELD_ERROR',
+      errno: 1054,
+      sqlState: '42S22',
+      sqlMessage: "Unknown column 'admin_name' in 'field list'",
+      sql: "SELECT `id`, `admin_name`, `email`, `password`, `role_id` FROM `zzb_emailverifies` AS `zzb_emailverify` WHERE `zzb_emailverify`.`email` = '1806394760@qq.com';",
+      parameters: undefined
+    },
+    original: Error: Unknown column 'admin_name' in 'field list'
+        at Packet.asError (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:456:32)
+        at PacketParser.onPacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:85:12)
+        at PacketParser.executeStart (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:92:25)
+        at Socket.emit (node:events:526:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_FIELD_ERROR',
+      errno: 1054,
+      sqlState: '42S22',
+      sqlMessage: "Unknown column 'admin_name' in 'field list'",
+      sql: "SELECT `id`, `admin_name`, `email`, `password`, `role_id` FROM `zzb_emailverifies` AS `zzb_emailverify` WHERE `zzb_emailverify`.`email` = '1806394760@qq.com';",
+      parameters: undefined
+    },
+    sql: "SELECT `id`, `admin_name`, `email`, `password`, `role_id` FROM `zzb_emailverifies` AS `zzb_emailverify` WHERE `zzb_emailverify`.`email` = '1806394760@qq.com';",
+    parameters: {}
+  }
+]
+[2022-07-22T18:27:57.468] [ERROR] error - [
+  '保存验证码失败',
+  Error
+      at Query.run (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\sequelize.js:311:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async MySQLQueryInterface.insert (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+      at async model.save (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:2432:35)
+      at async Function.create (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:1344:12)
+      at async EmailVerifyService.save (D:\Project\Github\zzb_mall_backend\src\service\emailVerify.service.js:12:17)
+      at async sendVerifyCode (D:\Project\Github\zzb_mall_backend\src\controller\emailVerify.controller.js:26:7)
+      at async checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:72:5)
+      at async cors (D:\Project\Github\zzb_mall_backend\node_modules\koa2-cors\dist\index.js:91:9) {
+    name: 'SequelizeUniqueConstraintError',
+    errors: [ [ValidationErrorItem] ],
+    parent: Error: Duplicate entry '1806394760@qq.com' for key 'zzb_emailverifies.email'
+        at Packet.asError (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Execute.execute (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:456:32)
+        at PacketParser.onPacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:85:12)
+        at PacketParser.executeStart (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:92:25)
+        at Socket.emit (node:events:526:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_DUP_ENTRY',
+      errno: 1062,
+      sqlState: '23000',
+      sqlMessage: "Duplicate entry '1806394760@qq.com' for key 'zzb_emailverifies.email'",
+      sql: 'INSERT INTO `zzb_emailverifies` (`id`,`email`,`verify_code`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);',
+      parameters: [Array]
+    },
+    original: Error: Duplicate entry '1806394760@qq.com' for key 'zzb_emailverifies.email'
+        at Packet.asError (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Execute.execute (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:456:32)
+        at PacketParser.onPacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:85:12)
+        at PacketParser.executeStart (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:92:25)
+        at Socket.emit (node:events:526:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_DUP_ENTRY',
+      errno: 1062,
+      sqlState: '23000',
+      sqlMessage: "Duplicate entry '1806394760@qq.com' for key 'zzb_emailverifies.email'",
+      sql: 'INSERT INTO `zzb_emailverifies` (`id`,`email`,`verify_code`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);',
+      parameters: [Array]
+    },
+    fields: { email: '1806394760@qq.com' },
+    sql: 'INSERT INTO `zzb_emailverifies` (`id`,`email`,`verify_code`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);'
+  }
+]
+[2022-07-22T19:17:20.925] [ERROR] error - [
+  '查询验证码失败',
+  Error
+      at Query.run (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\sequelize.js:311:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async MySQLQueryInterface.select (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+      at async Function.findAll (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:1134:21)
+      at async Function.findOne (D:\Project\Github\zzb_mall_backend\node_modules\sequelize\lib\model.js:1228:12)
+      at async EmailVerifyService.get (D:\Project\Github\zzb_mall_backend\src\service\emailVerify.service.js:33:13)
+      at async sendVerifyCode (D:\Project\Github\zzb_mall_backend\src\controller\emailVerify.controller.js:11:17)
+      at async checkAdminExists (D:\Project\Github\zzb_mall_backend\src\middleware\admin.middleware.js:72:5)
+      at async cors (D:\Project\Github\zzb_mall_backend\node_modules\koa2-cors\dist\index.js:91:9) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: Unknown column 'admin_name' in 'field list'
+        at Packet.asError (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:456:32)
+        at PacketParser.onPacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:85:12)
+        at PacketParser.executeStart (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:92:25)
+        at Socket.emit (node:events:526:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_FIELD_ERROR',
+      errno: 1054,
+      sqlState: '42S22',
+      sqlMessage: "Unknown column 'admin_name' in 'field list'",
+      sql: "SELECT `id`, `admin_name`, `email`, `password`, `role_id` FROM `zzb_emailverifies` AS `zzb_emailverify` WHERE `zzb_emailverify`.`email` = '1806394760@qq.com';",
+      parameters: undefined
+    },
+    original: Error: Unknown column 'admin_name' in 'field list'
+        at Packet.asError (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:456:32)
+        at PacketParser.onPacket (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:85:12)
+        at PacketParser.executeStart (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (D:\Project\Github\zzb_mall_backend\node_modules\mysql2\lib\connection.js:92:25)
+        at Socket.emit (node:events:526:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_FIELD_ERROR',
+      errno: 1054,
+      sqlState: '42S22',
+      sqlMessage: "Unknown column 'admin_name' in 'field list'",
+      sql: "SELECT `id`, `admin_name`, `email`, `password`, `role_id` FROM `zzb_emailverifies` AS `zzb_emailverify` WHERE `zzb_emailverify`.`email` = '1806394760@qq.com';",
+      parameters: undefined
+    },
+    sql: "SELECT `id`, `admin_name`, `email`, `password`, `role_id` FROM `zzb_emailverifies` AS `zzb_emailverify` WHERE `zzb_emailverify`.`email` = '1806394760@qq.com';",
+    parameters: {}
+  }
+]
+[2022-07-22T21:32:32.900] [ERROR] error - [ '密码错误', { email: '1806394760@qq.com' } ]
+[2022-07-22T22:32:15.935] [ERROR] error - [ '未接收到有效参数' ]
+[2022-07-22T22:34:32.650] [ERROR] error - [ 'updateById 未接收到有效参数' ]
+[2022-07-24T02:49:24.640] [ERROR] error - [ 'AdminService.getOne未接收有效的参数' ]
+[2022-07-24T02:50:10.315] [ERROR] error - [ 'AdminService.getOne未接收有效的参数' ]

@@ -1,12 +1,14 @@
 const { userRegisterError, getVerifyCodeError } = require('../constant/error.type');
-const { createUser, getUserInfo } = require('../service/user.service');
+const { createUser } = require('../service/user.service');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const { JWT_SECRET } = require('../config/config.default');
 const sendEmail = require('../utils/sendEmail');
 
 class UserController {
   // 给用户发送注册验证码
-  async sendRegisterCode(ctx, next) {
-    const { email } = ctx.request.body
+  async sendVerifyCode(ctx, next) {
+    const { email } = ctx.request.body;
 
     // 生成6位随机验证码
     let verifyCode = '';
@@ -14,9 +16,9 @@ class UserController {
       verifyCode = (Math.random() * 1000000 + '').slice(0, 6);
     }
     
-    // 加密验证码
+    // 加密邮箱地址和验证码
     const salt = bcrypt.genSaltSync(10);
-    const verifyCodeCrypted = bcrypt.hashSync(verifyCode, salt);
+    const verifyCodeCrypted = bcrypt.hashSync(email + verifyCode, salt);
 
     // 设置验证码过期时间(单位：min)
     const expire = 5;
@@ -24,11 +26,11 @@ class UserController {
     // 配置邮件内容
     const option = {
       to: email,
-      subject: '【ZZB商城】注册邮箱验证',
+      subject: '【ZZB商城】邮箱验证',
       html: ` <div style="padding: 10px 20px; background: #fcfcff; font-size: 14px;">
                 <p>你好！</p>
                 <p>
-                  <span>感谢你注册ZZB商城。</span><br/>
+                  <span>感谢你使用ZZB商城。</span><br/>
                   <span>你的登录邮箱为：${email}，请回填如下验证码：</span>
                 </p>
                 <p
@@ -57,7 +59,7 @@ class UserController {
       return false;
     }
 
-    // 设置加密验证码
+    // 将加密数据设置到 cookie 上
     ctx.cookies.set('verifyCode', verifyCodeCrypted, { maxAge: 1000*60*expire });
     // 响应客户端
     ctx.body = {
@@ -72,10 +74,10 @@ class UserController {
   async register(ctx, next) {
     const { user_name, email, password } = ctx.request.body;
     
-    let userInfo = {}
+    let userInfoSQL = {}
     // 创建用户
     try {
-      userInfo = await createUser(user_name, email, password);
+      userInfoSQL = await createUser(user_name, email, password);
     } catch (error) {// 捕获到错误，提交错误
       console.error(error);
       ctx.app.emit('error', userRegisterError, ctx);
@@ -87,28 +89,21 @@ class UserController {
       code: 0,
       message: '注册成功',
       result: {
-        id: userInfo.id,
-        email: userInfo.email,
-        user_name: userInfo.user_name,
+        id: userInfoSQL.id,
+        email: userInfoSQL.email,
+        user_name: userInfoSQL.user_name,
       }
     }
   }
 
   // 用户登录
   async login(ctx, next) {
-    const { email, password } = ctx.request.body;
-    const userInfo = await getUserInfo({ email });
-    if (userInfo) {
-      if (bcrypt.compareSync(password, userInfo.password)) {
-        ctx.body = {
-          code: 0,
-          message: '登录成功',
-          result: {
-            id: userInfo.id,
-            email: userInfo.email,
-            user_name: userInfo.user_name,
-          }
-        }
+    const { password, ...userInfo } = ctx.request.body.userInfoSQL;
+    ctx.body = {
+      code: 0,
+      message: '登录成功',
+      result: {
+        token: jwt.sign(userInfo, JWT_SECRET, {expiresIn: '1h'}),
       }
     }
   }

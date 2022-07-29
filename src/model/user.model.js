@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../db/sequelize');
 
 const User = sequelize.define('zzb_user', {
-  user_name: {
+  name: {
     type: DataTypes.STRING,
     allowNull: false,
     comment: '用户名, 必填'

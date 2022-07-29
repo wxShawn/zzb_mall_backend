@@ -5,14 +5,16 @@ const response = require('../app/response');
 const emailVerifyService = require('../service/emailVerify.service');
 
 class EmailVerifyController {
-  // 发送邮箱验证码
+  /**
+   * 发送邮箱验证码
+   */
   async sendVerifyCode(ctx, next) {
-    const { email } = ctx.request.query;
+    const { email } = ctx.state;
     
     // 生成6位随机验证码
     let verifyCode = '';
-    while (verifyCode.length < 6) {
-      verifyCode = (Math.random() * 1000000 + '').slice(0, 6);
+    for (let i = 0; i < 6; i++) {
+      verifyCode = verifyCode + Math.floor(Math.random()*10);
     }
     
     // 加密验证码
@@ -23,24 +25,10 @@ class EmailVerifyController {
     const expire = 5;
     
     // 删除旧的验证码（如果存在）
-    const removeOldCode = await emailVerifyService.remove(email);
-    if (!removeOldCode.sucsses) {
-      return response.error(ctx, {
-        status: 500,
-        message: '系统错误',
-        result: ''
-      });
-    }
+    await emailVerifyService.remove(email);
 
     // 将加密的新验证码存入数据库
-    const saveNewCode = await emailVerifyService.save({ email, verify_code: verifyCodeCrypted });
-    if (!saveNewCode.sucsses) {
-      return response.error(ctx, {
-        status: 500,
-        message: '系统错误',
-        result: ''
-      });
-    }
+    await emailVerifyService.save({ email, verify_code: verifyCodeCrypted });
 
     // 到达设定时间后删除验证码
     setTimeout(() => {
@@ -86,7 +74,7 @@ class EmailVerifyController {
     }
     
     // 响应客户端
-    return response.sucsses(ctx, {
+    return response.success(ctx, {
       status: 200,
       message: '验证码已发送',
       result: ''

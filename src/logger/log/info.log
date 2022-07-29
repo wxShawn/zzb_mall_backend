@@ -117,3 +117,434 @@
 [2022-07-24T02:57:46.068] [INFO] info - 登录成功 { id: 12, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
 [2022-07-24T03:02:57.868] [INFO] info - 登录成功 { id: 12, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
 [2022-07-24T03:05:35.477] [INFO] info - 登录成功 { id: 12, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-24T13:50:14.314] [INFO] info - 登录成功 { id: 12, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-24T14:49:33.254] [INFO] info - 登录成功 { id: 12, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-24T18:20:04.578] [INFO] info - 登录成功 { id: 12, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-24T20:18:41.805] [INFO] info - 登录成功 { id: 12, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-25T01:08:37.595] [INFO] info - 注册成功 {
+  dataValues: {
+    id: 16,
+    admin_name: 'Jerry',
+    email: '1234@qq.com',
+    password: '$2a$10$D0fz.ev/7S7Gk/k686z6nuyUmdrCQbLLXs.GKNLYkgJoFpheAAI6a',
+    role_id: '1',
+    updatedAt: 2022-07-24T17:08:37.587Z,
+    createdAt: 2022-07-24T17:08:37.587Z
+  },
+  _previousDataValues: {
+    admin_name: 'Jerry',
+    email: '1234@qq.com',
+    password: '$2a$10$D0fz.ev/7S7Gk/k686z6nuyUmdrCQbLLXs.GKNLYkgJoFpheAAI6a',
+    role_id: '1',
+    id: 16,
+    createdAt: 2022-07-24T17:08:37.587Z,
+    updatedAt: 2022-07-24T17:08:37.587Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: true,
+    _schema: null,
+    _schemaDelimiter: '',
+    attributes: undefined,
+    include: undefined,
+    raw: undefined,
+    silent: undefined
+  },
+  isNewRecord: false
+}
+[2022-07-25T01:09:38.569] [INFO] info - 注册成功 {
+  id: 17,
+  admin_name: 'Jerry',
+  email: '1234@qq.com',
+  role_id: '1',
+  updatedAt: 2022-07-24T17:09:38.561Z,
+  createdAt: 2022-07-24T17:09:38.561Z
+}
+[2022-07-25T14:10:05.945] [INFO] info - 登录成功 { id: 12, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-25T16:04:26.490] [INFO] info - 登录成功 { id: 12, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-25T17:10:48.862] [INFO] info - 登录成功 { id: 12, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-25T23:01:23.155] [INFO] info - 注册成功 {
+  id: 1,
+  admin_name: 'Shawn',
+  email: '1806394760@qq.com',
+  role_id: '1',
+  updatedAt: 2022-07-25T15:01:23.142Z,
+  createdAt: 2022-07-25T15:01:23.142Z
+}
+[2022-07-25T23:01:31.177] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-25T23:18:27.911] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-25T23:18:45.611] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-25T23:19:23.454] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T00:43:17.678] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T00:51:00.316] [INFO] info - 注册成功 {
+  id: 2,
+  admin_name: 'Tom',
+  email: '123@abc.co',
+  role_id: '1',
+  updatedAt: 2022-07-25T16:51:00.307Z,
+  createdAt: 2022-07-25T16:51:00.307Z
+}
+[2022-07-26T00:51:37.410] [INFO] info - 登录成功 { id: 2, admin_name: 'Tom', email: '123@abc.co', role_id: 1 }
+[2022-07-26T01:05:34.753] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T10:40:58.294] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T11:34:55.063] [INFO] info - 注册成功 {
+  id: 1,
+  admin_name: 'Shawn',
+  email: '1806394760@qq.com',
+  role_id: '1',
+  updatedAt: 2022-07-26T03:34:55.054Z,
+  createdAt: 2022-07-26T03:34:55.054Z
+}
+[2022-07-26T11:42:57.033] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T11:55:28.896] [INFO] info - 注册成功 {
+  id: 1,
+  admin_name: 'Shawn',
+  email: '1806394760@qq.com',
+  role_id: '1',
+  updatedAt: 2022-07-26T03:55:28.888Z,
+  createdAt: 2022-07-26T03:55:28.888Z
+}
+[2022-07-26T12:01:30.651] [INFO] info - 注册成功 {
+  id: 2,
+  admin_name: 'Tom',
+  email: '123@abc.com',
+  role_id: '1',
+  updatedAt: 2022-07-26T04:01:30.642Z,
+  createdAt: 2022-07-26T04:01:30.642Z
+}
+[2022-07-26T13:05:29.703] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T13:27:21.795] [INFO] info - 登录成功 { id: 2, admin_name: 'Tom', email: '123@abc.com', role_id: 2 }
+[2022-07-26T13:27:33.474] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T13:30:27.905] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T13:47:33.358] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T14:01:06.921] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T14:07:58.987] [INFO] info - 登录成功 { id: 1, admin_name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T14:51:53.574] [INFO] info - 注册成功 {
+  id: 1,
+  name: 'Shawn',
+  email: '1806394760@qq.com',
+  role_id: '1',
+  updatedAt: 2022-07-26T06:51:53.566Z,
+  createdAt: 2022-07-26T06:51:53.566Z
+}
+[2022-07-26T14:52:12.790] [INFO] info - 注册成功 {
+  id: 2,
+  name: 'Tom',
+  email: '123@abc.com',
+  role_id: '1',
+  updatedAt: 2022-07-26T06:52:12.785Z,
+  createdAt: 2022-07-26T06:52:12.785Z
+}
+[2022-07-26T14:53:22.339] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T15:13:21.713] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T15:17:48.642] [INFO] info - 注册成功 {
+  id: 3,
+  name: 'Jerry',
+  email: '234@abc.com',
+  role_id: '2',
+  updatedAt: 2022-07-26T07:17:48.634Z,
+  createdAt: 2022-07-26T07:17:48.634Z
+}
+[2022-07-26T15:18:07.088] [INFO] info - 注册成功 {
+  id: 4,
+  name: 'Jack',
+  email: '345@abc.com',
+  role_id: '2',
+  updatedAt: 2022-07-26T07:18:07.084Z,
+  createdAt: 2022-07-26T07:18:07.084Z
+}
+[2022-07-26T16:21:30.185] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T17:28:38.130] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T19:28:34.854] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T20:32:27.721] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T22:04:41.718] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T22:26:02.248] [INFO] info - 注册成功 {
+  id: 5,
+  name: 'Jack',
+  email: '345@abc.com',
+  role_id: '2',
+  updatedAt: 2022-07-26T14:26:02.235Z,
+  createdAt: 2022-07-26T14:26:02.235Z
+}
+[2022-07-26T22:30:27.566] [INFO] info - 注册成功 {
+  id: 6,
+  name: 'Rose',
+  email: '456@abc.com',
+  role_id: '3',
+  updatedAt: 2022-07-26T14:30:27.563Z,
+  createdAt: 2022-07-26T14:30:27.563Z
+}
+[2022-07-26T23:19:13.006] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-26T23:45:42.051] [INFO] info - 注册成功 {
+  id: 7,
+  name: 'Mary',
+  email: '567@abc.com',
+  role_id: '3',
+  updatedAt: 2022-07-26T15:45:42.046Z,
+  createdAt: 2022-07-26T15:45:42.046Z
+}
+[2022-07-26T23:51:41.244] [INFO] info - 注册成功 {
+  id: 8,
+  name: 'Rose',
+  email: '456@abc.com',
+  role_id: '3',
+  updatedAt: 2022-07-26T15:51:41.241Z,
+  createdAt: 2022-07-26T15:51:41.241Z
+}
+[2022-07-27T12:06:04.924] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T13:07:35.687] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T14:18:37.070] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T14:19:35.416] [INFO] info - 注册成功 {
+  id: 9,
+  name: 'Rose',
+  email: '456@abc.com',
+  createdAt: 2022-07-27T06:19:35.000Z,
+  updatedAt: 2022-07-27T06:19:35.000Z,
+  zzb_role: zzb_role {
+    dataValues: { id: 3, name: '客服专员' },
+    _previousDataValues: { id: 3, name: '客服专员' },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      include: undefined,
+      includeNames: undefined,
+      includeMap: undefined,
+      includeValidated: true,
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  }
+}
+[2022-07-27T15:34:27.171] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T15:45:36.608] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T16:05:59.802] [INFO] info - 注册成功 {
+  id: 10,
+  name: 'Mary',
+  email: '567@abc.com',
+  createdAt: 2022-07-27T08:05:59.000Z,
+  updatedAt: 2022-07-27T08:05:59.000Z,
+  zzb_role: zzb_role {
+    dataValues: { id: 3, name: '客服专员' },
+    _previousDataValues: { id: 3, name: '客服专员' },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      include: undefined,
+      includeNames: undefined,
+      includeMap: undefined,
+      includeValidated: true,
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  }
+}
+[2022-07-27T16:39:13.124] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T16:42:11.651] [INFO] info - 注册成功 {
+  id: 11,
+  name: 'Mary',
+  email: '567@abc.com',
+  createdAt: 2022-07-27T08:42:11.000Z,
+  updatedAt: 2022-07-27T08:42:11.000Z,
+  zzb_role: zzb_role {
+    dataValues: { id: 3, name: '客服专员' },
+    _previousDataValues: { id: 3, name: '客服专员' },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      include: undefined,
+      includeNames: undefined,
+      includeMap: undefined,
+      includeValidated: true,
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  }
+}
+[2022-07-27T16:49:41.399] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T16:50:39.569] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T17:04:25.519] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T18:32:35.626] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T18:54:39.226] [INFO] info - 注册成功 {
+  id: 12,
+  name: 'Rose',
+  email: '456@abc.com',
+  createdAt: 2022-07-27T10:54:39.000Z,
+  updatedAt: 2022-07-27T10:54:39.000Z,
+  zzb_role: zzb_role {
+    dataValues: { id: 1, name: '超级管理员' },
+    _previousDataValues: { id: 1, name: '超级管理员' },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      include: undefined,
+      includeNames: undefined,
+      includeMap: undefined,
+      includeValidated: true,
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  }
+}
+[2022-07-27T19:01:40.905] [INFO] info - 注册成功 {
+  id: 13,
+  name: 'Rose',
+  email: '456@abc.com',
+  createdAt: 2022-07-27T11:01:40.000Z,
+  updatedAt: 2022-07-27T11:01:40.000Z,
+  zzb_role: zzb_role {
+    dataValues: { id: 3, name: '客服专员' },
+    _previousDataValues: { id: 3, name: '客服专员' },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      include: undefined,
+      includeNames: undefined,
+      includeMap: undefined,
+      includeValidated: true,
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  }
+}
+[2022-07-27T19:04:00.711] [INFO] info - 注册成功 {
+  id: 14,
+  name: 'Jack',
+  email: '345@abc.com',
+  createdAt: 2022-07-27T11:04:00.000Z,
+  updatedAt: 2022-07-27T11:04:00.000Z,
+  zzb_role: zzb_role {
+    dataValues: { id: 2, name: '运营专员' },
+    _previousDataValues: { id: 2, name: '运营专员' },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      include: undefined,
+      includeNames: undefined,
+      includeMap: undefined,
+      includeValidated: true,
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  }
+}
+[2022-07-27T20:13:58.144] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T20:47:18.261] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T21:38:24.363] [INFO] info - 注册成功 {
+  id: 15,
+  name: 'Jack',
+  email: '345@abc.com',
+  createdAt: 2022-07-27T13:38:24.000Z,
+  updatedAt: 2022-07-27T13:38:24.000Z,
+  zzb_role: zzb_role {
+    dataValues: { id: 2, name: '运营专员' },
+    _previousDataValues: { id: 2, name: '运营专员' },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      include: undefined,
+      includeNames: undefined,
+      includeMap: undefined,
+      includeValidated: true,
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  }
+}
+[2022-07-27T22:21:57.500] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T22:42:56.197] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-27T23:13:50.300] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-28T13:36:49.223] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-28T15:13:10.825] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-28T15:19:02.579] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-28T15:22:35.258] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-28T15:25:05.755] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-28T15:25:51.804] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-28T16:28:59.203] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-28T17:30:57.361] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-28T19:34:19.864] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-28T20:48:03.409] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-28T21:51:44.962] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-28T22:54:36.573] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-29T12:58:02.364] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-29T14:01:39.057] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-29T14:47:34.665] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-29T16:15:49.498] [INFO] info - 登录成功 { id: 1, name: 'Shawn', email: '1806394760@qq.com', role_id: 1 }
+[2022-07-29T16:19:06.814] [INFO] info - 注册成功 {
+  id: 16,
+  name: 'Rose',
+  email: '345@abc.com',
+  createdAt: 2022-07-29T08:19:06.000Z,
+  updatedAt: 2022-07-29T08:19:06.000Z,
+  zzb_role: zzb_role {
+    dataValues: { id: 3, name: '客服专员' },
+    _previousDataValues: { id: 3, name: '客服专员' },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      include: undefined,
+      includeNames: undefined,
+      includeMap: undefined,
+      includeValidated: true,
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  }
+}
+[2022-07-29T16:23:25.037] [INFO] info - 注册成功 {
+  id: 17,
+  name: 'Mary',
+  email: '567@abc.com',
+  createdAt: 2022-07-29T08:23:25.000Z,
+  updatedAt: 2022-07-29T08:23:25.000Z,
+  zzb_role: zzb_role {
+    dataValues: { id: 3, name: '客服专员' },
+    _previousDataValues: { id: 3, name: '客服专员' },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      include: undefined,
+      includeNames: undefined,
+      includeMap: undefined,
+      includeValidated: true,
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  }
+}

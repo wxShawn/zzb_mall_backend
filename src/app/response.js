@@ -1,5 +1,5 @@
 module.exports = {
-  async sucsses(ctx, { status, message, result }) {
+  async success(ctx, { status, message, result }) {
     ctx.status = status;
     ctx.body = {
       code: 0,
